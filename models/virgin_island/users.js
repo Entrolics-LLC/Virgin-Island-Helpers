@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
             email: DataTypes.STRING,
             password: DataTypes.STRING,
             auth_type: DataTypes.STRING,
+            role:DataTypes.STRING,
             is_deleted:{ 
                 type:DataTypes.BOOLEAN,
                 defaultValue: false
