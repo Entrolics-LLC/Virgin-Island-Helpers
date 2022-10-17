@@ -20,10 +20,6 @@ module.exports = (sequelize, DataTypes) => {
                 primaryKey: true,
                 allowNull: false
             },
-            submission_no: {
-                type:DataTypes.INTEGER,
-                autoIncrement: true
-            },
             documents: DataTypes.ARRAY(DataTypes.STRING),
             flow: DataTypes.STRING,
             tasks: DataTypes.ARRAY(DataTypes.STRING),
