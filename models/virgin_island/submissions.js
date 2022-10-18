@@ -24,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
             flow: DataTypes.STRING,
             tasks: DataTypes.ARRAY(DataTypes.STRING),
             status: DataTypes.STRING,
+            priority: DataTypes.STRING,
+            case_status: DataTypes.STRING,
             created_at: {
                 type: DataTypes.DATE
             },
