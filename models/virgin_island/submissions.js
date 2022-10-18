@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
                 primaryKey: true,
                 allowNull: false
             },
+            user_id:DataTypes.STRING,
             documents: DataTypes.ARRAY(DataTypes.STRING),
             flow: DataTypes.STRING,
             tasks: DataTypes.ARRAY(DataTypes.STRING),
