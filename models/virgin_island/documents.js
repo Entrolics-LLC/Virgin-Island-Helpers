@@ -26,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
             status: DataTypes.STRING,
             priority: DataTypes.STRING,
             case_status: DataTypes.STRING,
+            adjudicate_status:{ 
+                type:DataTypes.STRING,
+                defaultValue: 'Requires Review'
+            },
+            is_open: DataTypes.BOOLEAN,
             created_at: {
                 type: DataTypes.DATE
             },
