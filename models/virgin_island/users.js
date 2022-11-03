@@ -38,6 +38,9 @@ module.exports = (sequelize, DataTypes) => {
             last_login: {
                 type: DataTypes.DATE
             },
+            curr_login: {
+                type: DataTypes.DATE
+            },
             updated_at: {
                 type: DataTypes.DATE
             }
