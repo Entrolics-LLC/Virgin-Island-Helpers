@@ -17,8 +17,13 @@ module.exports = (sequelize, DataTypes) => {
         {
             file_id: {
                 type: DataTypes.STRING,
-                primaryKey: true,
                 allowNull: false
+            },
+            case_no: {
+                type: DataTypes.STRING,
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
             },
             submission_id: DataTypes.STRING,
             document_name: DataTypes.STRING,
