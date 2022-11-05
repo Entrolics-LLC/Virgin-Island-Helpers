@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             status: DataTypes.STRING,
             priority: DataTypes.STRING,
             case_status: DataTypes.STRING,
+            case_category: DataTypes.STRING,
             adjudicate_status:{ 
                 type:DataTypes.STRING,
                 defaultValue: 'Requires Review'
