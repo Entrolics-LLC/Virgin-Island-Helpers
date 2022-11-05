@@ -20,8 +20,6 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             case_no: {
-                type: DataTypes.STRING,
-                primaryKey: true,
                 allowNull: false,
                 autoIncrement: true
             },
