@@ -14,33 +14,40 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Case_Detail.init(
-            {
-                file_id: {
-                    type: DataTypes.STRING,
-                    allowNull: false,
-                   
-                },
-                case_summary: DataTypes.STRING(10000),
-                income: DataTypes.STRING,
-                assets: DataTypes.STRING,
-                expenses: DataTypes.STRING,
-                narrative: DataTypes.STRING,
-                health_information: DataTypes.STRING,
-                members: DataTypes.ARRAY(DataTypes.STRING),
-                created_at: {
-                    type: DataTypes.DATE
-                },
-                is_deleted: DataTypes.BOOLEAN
+        {
+            case_id: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                primaryKey: true
             },
-            {
-                sequelize,
-                modelName: 'case_details',
-                schema: 'virgin_island',
-                createdAt: false,
-                updatedAt: false
-            });
-        
-    
+            file_id: {
+                type: DataTypes.STRING,
+                allowNull: false,
+
+            },
+            case_no: DataTypes.INTEGER,
+            applicant_id: DataTypes.STRING,
+            notes: DataTypes.STRING,
+            case_detail: DataTypes.JSON,
+            created_at: {
+                type: DataTypes.DATE
+            },
+            case_manager_id: DataTypes.STRING,
+            supporting_document_ids: DataTypes.ARRAY(DataTypes.STRING),
+            case_status: DataTypes.STRING,
+            priority: DataTypes.STRING,
+            members: DataTypes.ARRAY(DataTypes.STRING),
+            is_deleted: DataTypes.BOOLEAN
+        },
+        {
+            sequelize,
+            modelName: 'case_details',
+            schema: 'virgin_island',
+            createdAt: false,
+            updatedAt: false
+        });
+
+
 
 
     return Case_Detail;
