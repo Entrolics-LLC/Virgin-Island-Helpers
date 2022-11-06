@@ -18,14 +18,18 @@ module.exports = (sequelize, DataTypes) => {
             case_id: {
                 type: DataTypes.STRING,
                 allowNull: false,
-                primaryKey: true
             },
             file_id: {
                 type: DataTypes.STRING,
                 allowNull: false,
 
             },
-            case_no: DataTypes.INTEGER,
+            case_no: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                autoIncrement: true,
+                primaryKey: true,
+            },
             applicant_id: DataTypes.STRING,
             notes: DataTypes.STRING,
             case_detail: DataTypes.JSON,
