@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
             file_id: DataTypes.STRING,
             supp_doc_type: DataTypes.STRING,
             file_address: DataTypes.STRING,
+            file_name: DataTypes.STRING,
             created_at: {
                 type: DataTypes.DATE
             },
