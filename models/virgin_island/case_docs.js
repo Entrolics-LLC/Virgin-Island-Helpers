@@ -15,6 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     }
     CaseDocs.init(
         {
+            artifact_id: {
+                type: DataTypes.STRING,
+                allowNull: false,
+
+            },
             file_id: {
                 type: DataTypes.STRING,
                 allowNull: false,
