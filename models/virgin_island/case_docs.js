@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
 
             },
-            case_no: DataTypes.INTEGER,
+            case_no: DataTypes.STRING,
             document_name: DataTypes.STRING,
             document_type: DataTypes.STRING,
             category_type: DataTypes.STRING,
