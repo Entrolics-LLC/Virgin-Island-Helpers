@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
                 priority: DataTypes.STRING,
                 case_status: DataTypes.STRING,
                 case_category: DataTypes.STRING,
-                notes: DataTypes.STRING,
+                notes: DataTypes.STRING(2000),
                 category_confidence: DataTypes.FLOAT,
                 adjudicate_status:{ 
                     type:DataTypes.STRING,
