@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             message_type:DataTypes.STRING(100),
-            message_id: DataTypes.STRING(100),
             case_id:DataTypes.STRING(100),
             user_id:DataTypes.STRING(100),
             message_text:DataTypes.STRING(100),
