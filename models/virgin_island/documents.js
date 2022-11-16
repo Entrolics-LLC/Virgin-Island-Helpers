@@ -31,7 +31,10 @@ module.exports = (sequelize, DataTypes) => {
                 document_type: DataTypes.STRING,
                 status: DataTypes.STRING,
                 priority: DataTypes.STRING,
-                case_status: DataTypes.STRING,
+                case_status:{ 
+                    type:DataTypes.STRING,
+                    defaultValue: 'New'
+                },
                 case_category: DataTypes.STRING,
                 notes: DataTypes.STRING(2000),
                 category_confidence: DataTypes.FLOAT,
