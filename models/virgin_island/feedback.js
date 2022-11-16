@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
                 },
                 feedback: DataTypes.STRING(1000),
                 user_id: DataTypes.STRING,
+                sentiment: DataTypes.FLOAT,
                 rating: DataTypes.FLOAT,
                 created_at: {
                     type: DataTypes.DATE
