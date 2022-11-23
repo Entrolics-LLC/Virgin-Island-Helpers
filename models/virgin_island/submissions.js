@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             sequelize,
             modelName: 'submissions',
-            schema: 'virgin_island',
+            schema: 'irs',
             createdAt: false,
             updatedAt: false
         });

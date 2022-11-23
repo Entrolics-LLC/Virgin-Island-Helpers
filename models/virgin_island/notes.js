@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             sequelize,
             modelName: 'notes',
-            schema: 'virgin_island',
+            schema: 'irs',
             createdAt: false,
             updatedAt: false
         });

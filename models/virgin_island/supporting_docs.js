@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             sequelize,
             modelName: 'supporting_docs',
-            schema: 'virgin_island',
+            schema: 'irs',
             createdAt: false,
             updatedAt: false
         });

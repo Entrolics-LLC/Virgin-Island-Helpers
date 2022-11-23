@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
             {
                 sequelize,
                 modelName: 'documents',
-                schema: 'virgin_island',
+                schema: 'irs',
                 createdAt: false,
                 updatedAt: false
             });

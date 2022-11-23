@@ -15,15 +15,7 @@ const init = (cloudConfig = config) => {
 
         console.log('Connection has been established successfully.')
 
-        db.createSchema('context')
-            .then(() => console.log('****'))
-            .catch((e) => console.log('error'))
-
-        db.createSchema('sentiment')
-            .then(() => console.log('****'))
-            .catch((e) => console.log('error'))
-
-        db.createSchema('virgin_island')
+        db.createSchema('irs')
             .then(() => console.log('****'))
             .catch((e) => console.log('error'))
         addModels(db)
