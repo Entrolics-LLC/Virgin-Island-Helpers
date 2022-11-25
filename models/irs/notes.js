@@ -3,7 +3,7 @@ const {
     Model, NOW
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    class Note extends Model {
+    class IRS_Note extends Model {
         /**
          * Helper method for defining associations.
          * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             // define association here
         }
     }
-    Note.init(
+    IRS_Note.init(
         {
             id: {
                 type: DataTypes.STRING,
@@ -35,5 +35,5 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: false,
             updatedAt: false
         });
-    return Note;
+    return IRS_Note;
 };

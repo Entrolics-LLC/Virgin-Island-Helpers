@@ -3,7 +3,7 @@ const {
     Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    class SupportingDoc extends Model {
+    class IRS_SupportingDoc extends Model {
         /**
          * Helper method for defining associations.
          * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             // define association here
         }
     }
-    SupportingDoc.init(
+    IRS_SupportingDoc.init(
         {
             id: {
                 type: DataTypes.STRING,
@@ -40,5 +40,5 @@ module.exports = (sequelize, DataTypes) => {
             createdAt: false,
             updatedAt: false
         });
-    return SupportingDoc;
+    return IRS_SupportingDoc;
 };
