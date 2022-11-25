@@ -47,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
+            modelName: 'irs_users',
             modelName: 'users',
             schema: 'irs',
             createdAt: false,

@@ -33,7 +33,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: 'applicants',
+            modelName: 'irs_applicants',
+            tableName: 'applicants',
             schema: 'irs',
             createdAt: false,
             updatedAt: false
