@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
                 submission_id: DataTypes.STRING,
                 document_name: DataTypes.STRING,
                 document_type: DataTypes.STRING,
+                manager_id: DataTypes.STRING,
                 status: DataTypes.STRING,
                 priority: DataTypes.STRING,
                 case_status:{ 
