@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'irs_pdf_document',
-    tableName: 'pdf_document',
+    tableName: 'pdf_documents',
     schema: 'irs',
     createdAt: false,
     updatedAt: false

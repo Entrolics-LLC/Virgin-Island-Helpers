@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'virgin_island_pdf_document',
-    tableName: 'pdf_document',
+    tableName: 'pdf_documents',
     schema: 'virgin_island',
     createdAt: false,
     updatedAt: false
