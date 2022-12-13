@@ -35,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: 'supporting_docs',
+            modelName: 'virgin_island_supporting_docs',
+            tableName: 'supporting_docs',
             schema: 'virgin_island',
             createdAt: false,
             updatedAt: false

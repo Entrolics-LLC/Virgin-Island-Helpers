@@ -57,7 +57,8 @@ module.exports = (sequelize, DataTypes) => {
     value_height: DataTypes.FLOAT
   }, {
     sequelize,
-    modelName: 'schema_form_key_pairs',
+    modelName: 'irs_schema_form_key_pairs',
+    tableName: 'schema_form_key_pairs',
     schema: 'irs',
     createdAt: false,
     updatedAt: false

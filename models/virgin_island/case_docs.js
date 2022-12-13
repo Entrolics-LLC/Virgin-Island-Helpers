@@ -49,7 +49,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: 'case_docs',
+            modelName: 'virgin_island_case_docs',
+            tableName: 'case_docs',
             schema: 'virgin_island',
             createdAt: false,
             updatedAt: false

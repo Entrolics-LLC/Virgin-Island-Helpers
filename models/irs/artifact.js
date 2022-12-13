@@ -70,7 +70,8 @@ module.exports = (sequelize, DataTypes) => {
     artifact_name_versions: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
-    modelName: 'artifact',
+    modelName: 'irs_artifact',
+    tableName: 'artifact',
     schema: 'irs',
     createdAt: false,
     updatedAt: false

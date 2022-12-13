@@ -28,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     paragraphs: 'CHARACTER VARYING(1000000)'
   }, {
     sequelize,
-    modelName: 'pdf_pages',
+    modelName: 'irs_pdf_pages',
+    tableName: 'pdf_pages',
     schema: 'irs',
     createdAt: false,
     updatedAt: false

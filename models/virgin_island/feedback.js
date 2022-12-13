@@ -32,7 +32,8 @@ module.exports = (sequelize, DataTypes) => {
             },
             {
                 sequelize,
-                modelName: 'feedbacks',
+                modelName: 'virgin_island_feedbacks',
+                tableName: 'feedbacks',
                 schema: 'virgin_island',
                 createdAt: false,
                 updatedAt: false
