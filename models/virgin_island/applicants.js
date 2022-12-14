@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
             updated_at: {
                 type: DataTypes.DATE
             },
-            is_deleted: DataTypes.BOOLEAN
+            is_deleted: DataTypes.BOOLEAN,
+            key_pairs: DataTypes.JSON
         },
         {
             sequelize,
