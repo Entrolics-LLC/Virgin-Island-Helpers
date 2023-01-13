@@ -30,7 +30,9 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.DATE
             },
             is_deleted: DataTypes.BOOLEAN,
-            key_pairs: DataTypes.JSON
+            key_pairs: DataTypes.JSON,
+            member_names: DataTypes.ARRAY(DataTypes.STRING),
+            member_ssn: DataTypes.ARRAY(DataTypes.STRING)
         },
         {
             sequelize,
