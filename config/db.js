@@ -33,10 +33,12 @@ const init = (cloudConfig = config, schema = null) => {
             .catch((e) => console.log('error'))
         addModels(db)
 
+        console.log('schema', schema)
+
         if (schema) {
             try {
                 db.createSchema(schema)
-                    .then(() => console.log('***'))
+                    .then(() => console.log('new schema'))
                     .catch((e) => console.log('error'))
 
                 addDynamicModels(db)
