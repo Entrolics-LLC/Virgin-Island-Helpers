@@ -4,7 +4,7 @@ const addModels = require('../models')
 const addDynamicModels = require('../dynamicModels')
 const config = require('./config').development
 
-const init = (cloudConfig = config, schema = null) => {
+const init = (cloudConfig = config) => {
     try {
         let db = new Sequelize({ ...cloudConfig, ssl: true, pool: { maxConnections: 50, maxIdleTime: 30 }, language: 'en' })
 
@@ -33,19 +33,32 @@ const init = (cloudConfig = config, schema = null) => {
             .catch((e) => console.log('error'))
         addModels(db)
 
-        console.log('schema', schema)
+        return db
+    }
+    catch (error) {
+        console.log('Unable to connect to the database:', error)
 
-        if (schema) {
-            try {
-                db.createSchema(schema)
-                    .then(() => console.log('new schema'))
-                    .catch((e) => console.log('error'))
+        return null
+    }
+}
 
-                addDynamicModels(db)
-            }
-            catch (e) {
-            }
-        }
+const initDynamic = (cloudConfig = config, schema) => {
+    try {
+        let db = new Sequelize({ ...cloudConfig, ssl: true, pool: { maxConnections: 50, maxIdleTime: 30 }, language: 'en' })
+
+        console.log('connecting...')
+        db.authenticate()
+        // db.sync()
+        db.sync({ alter: true })
+        // db.sync({ force: true })
+
+        console.log('Connection has been established successfully.')
+
+        db.createSchema(schema)
+            .then(() => console.log('new schema'))
+            .catch((e) => console.log('error'))
+
+        addDynamicModels(db)
 
         return db
     }
@@ -96,5 +109,6 @@ const migrateDB = () => {
 
 module.exports = {
     init,
+    initDynamic,
     migrateDB
 }
