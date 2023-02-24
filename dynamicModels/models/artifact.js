@@ -72,7 +72,7 @@ module.exports = (sequelize, DataTypes, schema) => {
     sequelize,
     modelName: `${schema}_artifacts`,
     tableName: 'artifacts',
-    schema: schema,
+    schema,
     createdAt: false,
     updatedAt: false
   });

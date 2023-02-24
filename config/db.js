@@ -39,7 +39,7 @@ const init = (cloudConfig = config, schema = null) => {
                     .then(() => console.log('new schema'))
                     .catch((e) => console.log('error'))
 
-                addDynamicModels(db)
+                addDynamicModels(db, schema)
             }
             catch (e) {
             }

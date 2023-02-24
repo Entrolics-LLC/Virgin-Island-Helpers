@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes, schema) => {
             sequelize,
             modelName: `${schema}_case_details`,
             tableName: 'case_details',
-            schema: schema,
+            schema,
             createdAt: false,
             updatedAt: false
         });

@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes, schema) => {
             sequelize,
             modelName: `${schema}_submissions`,
             tableName: 'submissions',
-            schema: schema,
+            schema,
             createdAt: false,
             updatedAt: false
         });
