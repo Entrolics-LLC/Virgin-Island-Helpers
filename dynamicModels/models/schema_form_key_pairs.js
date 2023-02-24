@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes, schema)  => {
     sequelize,
     modelName: `${schema}_schema_form_key_pairs`,
     tableName: 'schema_form_key_pairs',
-    schema,
+    schema: schema,
     createdAt: false,
     updatedAt: false
   });

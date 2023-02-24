@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes, schema)  => {
     sequelize,
     modelName: `${schema}_pdf_pages`,
     tableName: 'pdf_pages',
-    schema,
+    schema: schema,
     createdAt: false,
     updatedAt: false
   });
