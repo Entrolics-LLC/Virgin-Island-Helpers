@@ -94,6 +94,5 @@ const migrateDB = () => {
 
 module.exports = {
     init,
-    migrateDB,
-    createSchema
+    migrateDB
 }
