@@ -2,7 +2,7 @@
 const {
     Model
 } = require('sequelize');
-module.exports = (sequelize, DataTypes, schema)  => {
+module.exports = (sequelize, DataTypes, schema) => {
     class Case_Detail extends Model {
         /**
          * Helper method for defining associations.
@@ -45,7 +45,8 @@ module.exports = (sequelize, DataTypes, schema)  => {
         },
         {
             sequelize,
-            modelName: 'case_details',
+            modelName: `${schema}_case_details`,
+            tableName: 'case_details',
             schema,
             createdAt: false,
             updatedAt: false

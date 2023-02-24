@@ -2,7 +2,7 @@
 const {
     Model, NOW
 } = require('sequelize');
-module.exports = (sequelize, DataTypes, schema)  => {
+module.exports = (sequelize, DataTypes, schema) => {
     class Submission extends Model {
         /**
          * Helper method for defining associations.
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes, schema)  => {
                 primaryKey: true,
                 allowNull: false
             },
-            user_id:DataTypes.STRING,
+            user_id: DataTypes.STRING,
             documents: DataTypes.ARRAY(DataTypes.STRING),
             flow: DataTypes.STRING,
             tasks: DataTypes.ARRAY(DataTypes.STRING),
@@ -33,14 +33,15 @@ module.exports = (sequelize, DataTypes, schema)  => {
             completed_date: {
                 type: DataTypes.DATE
             },
-            is_deleted:{ 
-                type:DataTypes.BOOLEAN,
+            is_deleted: {
+                type: DataTypes.BOOLEAN,
                 defaultValue: false
             }
         },
         {
             sequelize,
-            modelName: 'submissions',
+            modelName: `${schema}_submissions`,
+            tableName: 'submissions',
             schema,
             createdAt: false,
             updatedAt: false

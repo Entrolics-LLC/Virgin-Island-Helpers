@@ -2,7 +2,7 @@
 const {
     Model, NOW
 } = require('sequelize');
-module.exports = (sequelize, DataTypes, schema)  => {
+module.exports = (sequelize, DataTypes, schema) => {
     class User extends Model {
         /**
          * Helper method for defining associations.
@@ -24,13 +24,13 @@ module.exports = (sequelize, DataTypes, schema)  => {
             email: DataTypes.STRING,
             password: DataTypes.STRING,
             auth_type: DataTypes.STRING,
-            role:DataTypes.STRING,
-            is_deleted:{ 
-                type:DataTypes.BOOLEAN,
+            role: DataTypes.STRING,
+            is_deleted: {
+                type: DataTypes.BOOLEAN,
                 defaultValue: false
             },
-            is_validated:{ 
-                type:DataTypes.BOOLEAN
+            is_validated: {
+                type: DataTypes.BOOLEAN
             },
             created_at: {
                 type: DataTypes.DATE
@@ -47,7 +47,8 @@ module.exports = (sequelize, DataTypes, schema)  => {
         },
         {
             sequelize,
-            modelName: 'users',
+            modelName: `${schema}_users`,
+            tableName: 'users',
             schema,
             createdAt: false,
             updatedAt: false

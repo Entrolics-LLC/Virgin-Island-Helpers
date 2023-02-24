@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-module.exports = (sequelize, DataTypes, schema)  => {
+module.exports = (sequelize, DataTypes, schema) => {
   class PdfDocument extends Model {
     /**
      * Helper method for defining associations.
@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes, schema)  => {
     schema_id: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'pdf_documents',
+    modelName: `${schema}_pdf_documents`,
+    tableName: 'pdf_documents',
     schema,
     createdAt: false,
     updatedAt: false
